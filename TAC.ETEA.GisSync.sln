@@ -1,0 +1,23 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GisSync.Engine", "GisSync.Engine\GisSync.Engine.csproj", "{82C1FC8C-C6D6-4EC2-92EA-9CFD86EE286F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GisSync.Workers", "GisSync.Workers\GisSync.Workers.csproj", "{0F36FDF5-043E-4C61-845A-6FD016432668}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{82C1FC8C-C6D6-4EC2-92EA-9CFD86EE286F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82C1FC8C-C6D6-4EC2-92EA-9CFD86EE286F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82C1FC8C-C6D6-4EC2-92EA-9CFD86EE286F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82C1FC8C-C6D6-4EC2-92EA-9CFD86EE286F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F36FDF5-043E-4C61-845A-6FD016432668}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F36FDF5-043E-4C61-845A-6FD016432668}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F36FDF5-043E-4C61-845A-6FD016432668}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F36FDF5-043E-4C61-845A-6FD016432668}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
