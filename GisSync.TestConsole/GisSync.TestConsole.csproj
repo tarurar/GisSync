@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CF99A0BD-301A-48D5-A746-C0C147A77863}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>GisSync.TestConsole</RootNamespace>
+    <AssemblyName>GisSync.TestConsole</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ExternalConsole>true</ExternalConsole>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ExternalConsole>true</ExternalConsole>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GisSync.Engine\GisSync.Engine.csproj">
+      <Project>{82C1FC8C-C6D6-4EC2-92EA-9CFD86EE286F}</Project>
+      <Name>GisSync.Engine</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GisSync.Model\GisSync.Model.csproj">
+      <Project>{213AB057-8E36-4C92-BAF3-4FBEC7DFB484}</Project>
+      <Name>GisSync.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GisSync.Workers\GisSync.Workers.csproj">
+      <Project>{0F36FDF5-043E-4C61-845A-6FD016432668}</Project>
+      <Name>GisSync.Workers</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>
