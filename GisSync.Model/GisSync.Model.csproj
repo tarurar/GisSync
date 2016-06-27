@@ -30,8 +30,14 @@
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MyClass.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SyncSqlModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GisSync.Engine\GisSync.Engine.csproj">
+      <Project>{82C1FC8C-C6D6-4EC2-92EA-9CFD86EE286F}</Project>
+      <Name>GisSync.Engine</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
