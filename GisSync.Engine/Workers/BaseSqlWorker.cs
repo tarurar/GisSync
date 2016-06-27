@@ -3,7 +3,7 @@ using System.Data.SqlClient;
 
 namespace GisSync.Engine.Workers
 {
-	public class BaseWorker: ISqlWorker
+	public class BaseSqlWorker: ISqlWorker
 	{
 		public virtual void Execute(SqlConnection source, SqlConnection dest, Action<int> statusCallback)
 		{

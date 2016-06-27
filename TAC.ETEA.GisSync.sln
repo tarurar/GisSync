@@ -5,6 +5,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GisSync.Engine", "GisSync.E
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GisSync.Workers", "GisSync.Workers\GisSync.Workers.csproj", "{0F36FDF5-043E-4C61-845A-6FD016432668}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GisSync.Definitions", "GisSync.Definitions\GisSync.Definitions.csproj", "{011066DF-5A94-45DB-BAA2-5B744E734678}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GisSync.TestConsole", "GisSync.TestConsole\GisSync.TestConsole.csproj", "{CF99A0BD-301A-48D5-A746-C0C147A77863}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,5 +23,13 @@ Global
 		{0F36FDF5-043E-4C61-845A-6FD016432668}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0F36FDF5-043E-4C61-845A-6FD016432668}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0F36FDF5-043E-4C61-845A-6FD016432668}.Release|Any CPU.Build.0 = Release|Any CPU
+		{011066DF-5A94-45DB-BAA2-5B744E734678}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{011066DF-5A94-45DB-BAA2-5B744E734678}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{011066DF-5A94-45DB-BAA2-5B744E734678}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{011066DF-5A94-45DB-BAA2-5B744E734678}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF99A0BD-301A-48D5-A746-C0C147A77863}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF99A0BD-301A-48D5-A746-C0C147A77863}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF99A0BD-301A-48D5-A746-C0C147A77863}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF99A0BD-301A-48D5-A746-C0C147A77863}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
