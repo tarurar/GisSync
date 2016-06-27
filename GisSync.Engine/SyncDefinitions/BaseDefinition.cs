@@ -3,11 +3,11 @@ using System.Collections.Generic;
 
 using GisSync.Engine.Workers;
 
-namespace GisSync.Engine
+namespace GisSync.Engine.SyncDefinitions
 {
 	public abstract class BaseDefinition<TWorker>
 	{
-		public SortedList<int, TWorker> Workers;
+		public Queue<TWorker> Workers;
 	}
 }
 
