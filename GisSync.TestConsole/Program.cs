@@ -14,9 +14,10 @@ namespace GisSync.TestConsole
 		public static void Main(string[] args)
 		{
 
-            var syncService = ServiceLocator.Instance.GetService<ISyncSqlService>();
+			//var syncService = ServiceLocator.Instance.GetService<ISyncSqlService>();
+			ISyncSqlService syncService;
 
-
+			Console.Write(nameof(syncService));
             /*var model = new SyncSqlModel
 			{
 				Nodes = new Queue<BaseSqlDefinition>(new BaseSqlDefinition[] 

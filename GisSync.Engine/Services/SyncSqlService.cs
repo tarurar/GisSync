@@ -13,15 +13,15 @@ namespace GisSync.Engine.Services
         
         public SyncSqlService(string sourceConnString, string destConnString)
         {
-            if (String.IsNullOrEmpty(sourceConnString)) throw new ArgumentNullException("sourceConnString");
-            if (String.IsNullOrEmpty(destConnString)) throw new ArgumentNullException("destConnString");
+			if (String.IsNullOrEmpty(sourceConnString)) throw new ArgumentNullException(nameof(sourceConnString));
+			if (String.IsNullOrEmpty(destConnString)) throw new ArgumentNullException(nameof(destConnString));
             _sourceConnString = sourceConnString;
             _destConnString = destConnString;
         }
 
         public void RunSync(SyncSqlModel syncPlan)
         {
-            if (syncPlan == null) throw new ArgumentNullException("syncPlan");
+			if (syncPlan == null) throw new ArgumentNullException(nameof(syncPlan));
 
             using (var sourceConnection = new SqlConnection(_sourceConnString))
             using (var destConnection = new SqlConnection(_destConnString))
