@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using NLog;
 
 using GisSync.Engine.Services;
@@ -20,7 +21,10 @@ namespace GisSync.Engine
 
         private void RegisterServices() {
             _services.Add(typeof(ILogger), new Lazy<ILogger>(() => LogManager.GetLogger("ExceptionLogger")));
-            _services.Add(typeof(ISyncSqlService), new Lazy<ISyncSqlService>(() => new SyncSqlService("", "")));
+
+			var sourceSql = ConfigurationManager.AppSettings["sourceConnectionString"];
+			var destSql = ConfigurationManager.AppSettings["destConnectionString"];
+			_services.Add(typeof(ISyncSqlService), new Lazy<ISyncSqlService>(() => new SyncSqlService(sourceSql, destSql)));
         }
 
         public static IServiceLocator Instance

@@ -7,16 +7,16 @@ namespace GisSync.Workers.Parcels
 {
 	public class DeleteWorker: BaseSqlWorker
 	{
-		public override void Execute(SqlConnection source, SqlConnection dest, Action<int> statusCallback)
+		public override void Execute(SqlConnection source, SqlConnection dest, Action<int, string> statusCallback)
 		{
 			// delete smth from dest
-			statusCallback(33);
+			statusCallback(33, "Deleting parcels");
 
 			// delete smth from dest
-			statusCallback(66);
+			statusCallback(66, "Deleting parcels");
 
 			// delete smth from dest
-			statusCallback(100);
+			statusCallback(100, "Deleting parcels");
 		}
 	}
 }
