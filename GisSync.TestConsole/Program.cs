@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 
-using GisSync.Model;
 using GisSync.Engine.Workers;
-using GisSync.Engine.SyncDefinitions;
+using GisSync.Engine.Definitions;
 using GisSync.Workers;
+using GisSync.Engine;
+using GisSync.Engine.Services;
 
 namespace GisSync.TestConsole
 {
@@ -12,7 +13,11 @@ namespace GisSync.TestConsole
 	{
 		public static void Main(string[] args)
 		{
-			var model = new SyncSqlModel
+
+            var syncService = ServiceLocator.Instance.GetService<ISyncSqlService>();
+
+
+            /*var model = new SyncSqlModel
 			{
 				Nodes = new Queue<BaseSqlDefinition>(new BaseSqlDefinition[] 
 				{
@@ -26,14 +31,7 @@ namespace GisSync.TestConsole
 						})
 					}
 				})
-			};
-
-			var n1 = model.Nodes.Dequeue();
-			var w1 = n1.Workers.Dequeue();
-			w1.Execute(null, null, (percent) => 
-			{ 
-				Console.WriteLine("Percentage: {0}", percent);
-			});
-		}
+			};*/
+        }
 	}
 }

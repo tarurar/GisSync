@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 using GisSync.Engine.Workers;
 
-namespace GisSync.Engine.SyncDefinitions
+namespace GisSync.Engine.Definitions
 {
 	public abstract class BaseDefinition<TWorker>
 	{

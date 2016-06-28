@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -27,6 +27,10 @@
     <ExternalConsole>true</ExternalConsole>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <HintPath>..\packages\NLog.4.3.5\lib\net45\NLog.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
   </ItemGroup>
@@ -39,14 +43,19 @@
       <Project>{82C1FC8C-C6D6-4EC2-92EA-9CFD86EE286F}</Project>
       <Name>GisSync.Engine</Name>
     </ProjectReference>
-    <ProjectReference Include="..\GisSync.Model\GisSync.Model.csproj">
-      <Project>{213AB057-8E36-4C92-BAF3-4FBEC7DFB484}</Project>
-      <Name>GisSync.Model</Name>
-    </ProjectReference>
     <ProjectReference Include="..\GisSync.Workers\GisSync.Workers.csproj">
       <Project>{0F36FDF5-043E-4C61-845A-6FD016432668}</Project>
       <Name>GisSync.Workers</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="NLog.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="NLog.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

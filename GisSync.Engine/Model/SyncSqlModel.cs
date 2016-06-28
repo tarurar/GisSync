@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 
-using GisSync.Engine.SyncDefinitions;
+using GisSync.Engine.Definitions;
 
-namespace GisSync.Model
+namespace GisSync.Engine.Model
 {
 	public class SyncSqlModel
 	{
