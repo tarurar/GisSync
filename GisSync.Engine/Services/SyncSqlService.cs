@@ -9,7 +9,7 @@ namespace GisSync.Engine.Services
     {
         protected readonly string _sourceConnString;
         protected readonly string _destConnString;
-        protected readonly ILogger Logger = ServiceLocator.Instance.GetService<ILogger>();
+        protected readonly static ILogger Logger = ServiceLocator.Instance.GetService<ILogger>();
         
         public SyncSqlService(string sourceConnString, string destConnString)
         {
