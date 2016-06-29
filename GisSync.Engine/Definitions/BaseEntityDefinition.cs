@@ -5,7 +5,7 @@ using GisSync.Engine.Workers;
 
 namespace GisSync.Engine.Definitions
 {
-	public abstract class BaseDefinition<TWorker>
+	public abstract class BaseEntityDefinition<TWorker>
 	{
 		public Queue<TWorker> Workers;
 	}

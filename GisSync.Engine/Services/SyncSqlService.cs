@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Data.SqlClient;
-using GisSync.Engine.Model;
+using GisSync.Engine.Schema;
 using NLog;
 
 namespace GisSync.Engine.Services
@@ -19,20 +19,20 @@ namespace GisSync.Engine.Services
             _destConnString = destConnString;
         }
 
-        public void RunSync(SyncSqlModel syncPlan, Action<int, string> statusCallback)
+        public void RunSync(SyncSqlSchema syncSchema, Action<int, string> statusCallback)
         {
-			if (syncPlan == null) throw new ArgumentNullException(nameof(syncPlan));
+			if (syncSchema == null) throw new ArgumentNullException(nameof(syncSchema));
 			if (statusCallback == null) throw new ArgumentException(nameof(statusCallback));
 
             using (var sourceConnection = new SqlConnection(_sourceConnString))
             using (var destConnection = new SqlConnection(_destConnString))
             {
-				foreach (var node in syncPlan.Nodes)
+				foreach (var def in syncSchema.Definitions)
 				{
-                    Logger.Info("each node");
-					foreach (var worker in node.Workers)
+                    Logger.Info("each definition");
+					foreach (var worker in def.Workers)
 					{
-                        Logger.Info("each worker inside node");
+                        Logger.Info("each worker inside definition");
                         worker.Execute(sourceConnection, destConnection, statusCallback);
 					}
 				}

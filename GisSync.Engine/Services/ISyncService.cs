@@ -8,6 +8,6 @@ namespace GisSync.Engine.Services
 {
     public interface ISyncService<T>
     {
-        void RunSync(T syncPlan, Action<int, string> statusCallback);
+        void RunSync(T syncSchema, Action<int, string> statusCallback);
     }
 }

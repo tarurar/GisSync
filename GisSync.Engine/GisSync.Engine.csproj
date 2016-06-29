@@ -36,7 +36,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Model\SyncSqlModel.cs" />
+    <Compile Include="Schema\SyncSqlSchema.cs" />
     <Compile Include="ServiceLocator\IServiceLocator.cs" />
     <Compile Include="ServiceLocator\ServiceLocator.cs" />
     <Compile Include="Services\ISyncService.cs" />
@@ -45,8 +45,8 @@
     <Compile Include="Workers\IWorker.cs" />
     <Compile Include="Workers\ISqlWorker.cs" />
     <Compile Include="Workers\BaseSqlWorker.cs" />
-    <Compile Include="Definitions\BaseDefinition.cs" />
-    <Compile Include="Definitions\BaseSqlDefinition.cs" />
+    <Compile Include="Definitions\BaseEntityDefinition.cs" />
+    <Compile Include="Definitions\BaseSqlEntityDefinition.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

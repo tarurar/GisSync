@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GisSync.Engine.Services
 {
-    public interface ISyncSqlService: ISyncService<Model.SyncSqlModel>
+    public interface ISyncSqlService: ISyncService<Schema.SyncSqlSchema>
     {
     }
 }

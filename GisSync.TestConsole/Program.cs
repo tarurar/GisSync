@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 using GisSync.Engine.Workers;
 using GisSync.Engine.Definitions;
-using GisSync.Engine.Model;
+using GisSync.Engine.Schema;
 using GisSync.Engine;
 using GisSync.Engine.Services;
 
@@ -14,11 +14,11 @@ namespace GisSync.TestConsole
 		public static void Main(string[] args)
 		{
 			var syncService = ServiceLocator.Instance.GetService<ISyncSqlService>();
-			var syncPlan = new SyncSqlModel
+			var syncSchema = new SyncSqlSchema
 			{
-				Nodes = new Queue<BaseSqlDefinition>(new BaseSqlDefinition[]
+				Definitions = new Queue<BaseSqlEntityDefinition>(new BaseSqlEntityDefinition[]
 				{
-					new BaseSqlDefinition
+					new BaseSqlEntityDefinition
 					{
 						Workers = new Queue<ISqlWorker>(new ISqlWorker[]
 						{
@@ -30,7 +30,7 @@ namespace GisSync.TestConsole
 				})
 			};
 
-			syncService.RunSync(syncPlan, (percentage, comment) =>
+			syncService.RunSync(syncSchema, (percentage, comment) =>
 			{
 				Console.WriteLine("{0}: {1}%", comment, percentage);
 			});
