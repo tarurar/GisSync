@@ -24,14 +24,16 @@ namespace GisSync.Engine.Services
 			if (syncPlan == null) throw new ArgumentNullException(nameof(syncPlan));
 			if (statusCallback == null) throw new ArgumentException(nameof(statusCallback));
 
-			using (var sourceConnection = new SqlConnection(_sourceConnString))
-			using (var destConnection = new SqlConnection(_destConnString))
-			{
+            using (var sourceConnection = new SqlConnection(_sourceConnString))
+            using (var destConnection = new SqlConnection(_destConnString))
+            {
 				foreach (var node in syncPlan.Nodes)
 				{
+                    Logger.Info("each node");
 					foreach (var worker in node.Workers)
 					{
-						worker.Execute(sourceConnection, destConnection, statusCallback);
+                        Logger.Info("each worker inside node");
+                        worker.Execute(sourceConnection, destConnection, statusCallback);
 					}
 				}
 			}
