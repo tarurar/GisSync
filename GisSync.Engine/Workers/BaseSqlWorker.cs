@@ -11,8 +11,10 @@ namespace GisSync.Engine.Workers
 
 		public virtual void Execute(SqlConnection source, SqlConnection dest, Action<int, string> statusCallback)
 		{
-			throw new NotImplementedException();
-		}
+            if (source == null) throw new ArgumentNullException(nameof(source));
+            if (dest == null) throw new ArgumentNullException(nameof(dest));
+            if (statusCallback == null) throw new ArgumentNullException(nameof(statusCallback));
+        }
 	}
 }
 

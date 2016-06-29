@@ -24,19 +24,38 @@ namespace GisSync.Engine.Services
 			if (syncSchema == null) throw new ArgumentNullException(nameof(syncSchema));
 			if (statusCallback == null) throw new ArgumentException(nameof(statusCallback));
 
-            using (var sourceConnection = new SqlConnection(_sourceConnString))
-            using (var destConnection = new SqlConnection(_destConnString))
+            using (var sourceConnection = CreateConnection(_sourceConnString))
+            using (var destConnection = CreateConnection(_destConnString))
             {
-				foreach (var def in syncSchema.Definitions)
+                foreach (var def in syncSchema.Definitions)
 				{
-                    Logger.Info("each definition");
 					foreach (var worker in def.Workers)
 					{
-                        Logger.Info("each worker inside definition");
-                        worker.Execute(sourceConnection, destConnection, statusCallback);
+                        try
+                        {
+                            worker.Execute(sourceConnection, destConnection, statusCallback);
+                        }
+                        catch (Exception ex)
+                        {
+                            Logger.Error(ex, string.Format(Resources.StringResources.WorkerExecutionFailedFmt, worker.GetType().FullName));
+                            throw new ApplicationException(Resources.StringResources.WorkerExecutionFailed);
+                        }
                     }
 				}
 			}
+        }
+
+        private SqlConnection CreateConnection(string connectionString)
+        {
+            try
+            {
+                return new SqlConnection(connectionString);
+            }
+            catch (Exception ex)
+            {
+                Logger.Error(ex, string.Format(Resources.StringResources.ConnectionFailedFmt, connectionString));
+                throw new ApplicationException(Resources.StringResources.ConnectionFailed);
+            }
         }
     }
 }

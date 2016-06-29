@@ -34,6 +34,7 @@
     <Compile Include="Definitions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Schema.cs" />
+    <Compile Include="Workers\ETEABaseWorker.cs" />
     <Compile Include="Workers\Parcels\CreateWorker.cs" />
     <Compile Include="Workers\Parcels\UpdateWorker.cs" />
     <Compile Include="Workers\Parcels\DeleteWorker.cs" />
