@@ -4,7 +4,7 @@ VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GisSync.Engine", "GisSync.Engine\GisSync.Engine.csproj", "{82C1FC8C-C6D6-4EC2-92EA-9CFD86EE286F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GisSync.Workers", "GisSync.Workers\GisSync.Workers.csproj", "{0F36FDF5-043E-4C61-845A-6FD016432668}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GisSync.ETEA.Schema", "GisSync.Workers\GisSync.ETEA.Schema.csproj", "{0F36FDF5-043E-4C61-845A-6FD016432668}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GisSync.TestConsole", "GisSync.TestConsole\GisSync.TestConsole.csproj", "{CF99A0BD-301A-48D5-A746-C0C147A77863}"
 EndProject

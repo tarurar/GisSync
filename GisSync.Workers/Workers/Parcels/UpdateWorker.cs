@@ -3,7 +3,7 @@ using System.Data.SqlClient;
 
 using GisSync.Engine.Workers;
 
-namespace GisSync.Workers.Parcels
+namespace GisSync.ETEA.Schema.Workers.Parcels
 {
 	public class UpdateWorker: BaseSqlWorker
 	{

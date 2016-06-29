@@ -34,7 +34,7 @@ namespace GisSync.Engine.Services
 					{
                         Logger.Info("each worker inside definition");
                         worker.Execute(sourceConnection, destConnection, statusCallback);
-					}
+                    }
 				}
 			}
         }
