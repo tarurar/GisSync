@@ -43,7 +43,7 @@
       <Project>{82C1FC8C-C6D6-4EC2-92EA-9CFD86EE286F}</Project>
       <Name>GisSync.Engine</Name>
     </ProjectReference>
-    <ProjectReference Include="..\GisSync.Workers\GisSync.ETEA.Schema.csproj">
+    <ProjectReference Include="..\GisSync.ETEA.Schema\GisSync.ETEA.Schema.csproj">
       <Project>{0F36FDF5-043E-4C61-845A-6FD016432668}</Project>
       <Name>GisSync.ETEA.Schema</Name>
     </ProjectReference>
